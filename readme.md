@@ -66,6 +66,7 @@ At a bodyweight of 120lbs/54.5KG:
 - Squat: 250lb/113.4KG
 - Bench: 150lb/68KG
 - Deadlift: 300lb/136KG
+
 It does feel nice that my bench is above average for the weight class that I would be in, but of course, the pressures of a competition can affect even the best lifter, of which, I certainly am not (yet).
 
 ### Attribution
