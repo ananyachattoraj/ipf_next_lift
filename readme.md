@@ -37,6 +37,7 @@ Since 2023 is not over at the time of analysis and meet records may come in with
 
 #### Geographies and Demographics
 
+![% of Women Competitors By Lifter Country](https://github.com/ananyachattoraj/ipf_next_lift/assets/15469141/f7f7b8b7-3a47-416b-b5a7-d21bc818bbb4) ![% of Women Competitors By Meet Country](https://github.com/ananyachattoraj/ipf_next_lift/assets/15469141/1e111339-6da4-4aff-b88a-39cad0674bf6)
 
 ### Attribution
 This page uses data from the OpenPowerlifting project, https://www.openpowerlifting.org.
