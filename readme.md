@@ -62,6 +62,7 @@ It is interesting to note that Goodlift points have the most even distribution a
 There are still further investigations that I plan to conduct using this data, including the construction of a predictive model to assist the choice of a next lift.
 
 If at this point, you're wondering what my lift numbers are, I'm only an enthusiast and a post on the barrier to IPF regulated competition would be out of the scope of a data analysis. Still, my gym numbers are as follows:
+
 At a bodyweight of 120lbs/54.5KG:
 - Squat: 250lb/113.4KG
 - Bench: 150lb/68KG
