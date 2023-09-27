@@ -58,8 +58,18 @@ We see that all score types underscore low weight classes. Note that since the 4
 
 It is interesting to note that Goodlift points have the most even distribution among weight classes of women, but are outperformed in equity of distribution by other score types for men. It may also simply be the case that constructing a score to represent the men's weight classes is more challenging since there is a greater range in weights reflected in the men's weight classes despite there being the same number of weight classes across genders. There has been talk within the wider community about hoping for a 92KG weight class for women, which may change the distribution of the women's scores to something closer to the men's.
 
+### Modeling
+After cleaning data, I exported the results of a MySQL query into a CSV to go back to Python for modeling. At the point of writing, I have utilized SKLearn's Linear Regression, HGBoostRegression, and SVR models to predict lifts based on a former lift. My method is as follows:
+
+- Using Age, Bodyweight, and Sex at competition as fixed features, target variables for prediction are Squat, Bench, and Deadlift attempts.
+- For each lift, I am training models to predict the second and third attempts. I use the previous lift attempt to predict the next one. AKA, to predict Squat attempt 2, I use the fixed features above and Squat 1. To predict Squat 3, I use the fixed features and Squat 1 and Squat 2.
+- Each lift type is treated separately. While there are some correlations beween performing well in one lift and performing poorly in another (due to biomechanical advantages in one lift leading to a disadvantage in another like in Squat and Deadlift or Bench and Deadlift), these discrepancies decrease with elite level athletes who are experienced in tweaking lift forms to mitigate for biomechanical disadvantages.
+- I am not predicting first attempts of any lift since those are largely based on factors not captured by the data at hand. First lifts are based on training maxes, fatigue regulation, and physical variabilities in health assessed during warm up.
+
+I am using GridSearchCV to optimize hyperparameters, and I have learned not to optimize SVR models using the full dataset. I'm at a runtime of 7000 minutes and hope to be able to push the modeling notebook at some point 😅.
+
 ### Parting Thoughts
-There are still further investigations that I plan to conduct using this data, including the construction of a predictive model to assist the choice of a next lift.
+My predictive models currently don't have a good accuracy rate. In this data, failed lifts are recorded with a negative number. It is possible that this indicator is a poor method of recording for the purpose of modeling. In the next steps, I will try two things: First, I will record all missed attempts as a 0 since 0 KG was lifted successfully. Second, if that doesn't result in improved accuracy, I will drop all rows with negative attempts for a particular lift. While this means that the model's trainign data set decreases in size, the relevant features are still present since the goal of the model is to predict successful next attempts.
 
 If at this point, you're wondering what my lift numbers are, I'm only an enthusiast and a post on the barrier to IPF regulated competition would be out of the scope of a data analysis. Still, my gym numbers are as follows:
 
